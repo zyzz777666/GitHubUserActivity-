@@ -27,7 +27,7 @@ def get_latest_events(username):
                 print(f"created {event['payload']['ref_type']} {event['payload']['ref']}")
             else:
                 print(f"- :smiley: {event['type']}")
-    except:
+    except BaseException:
         print(f"Error fetching events for {username}: {response.status_code}")
 
 
